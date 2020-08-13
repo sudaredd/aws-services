@@ -1,0 +1,7 @@
+<#list cars as car>
+<#assign pr=car.price?round>
+<#if pr gt 50000>
+<#assign pr=50000>
+</#if>
+${car.name}: ${pr}
+</#list>

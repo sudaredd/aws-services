@@ -1,0 +1,15 @@
+{
+<#assign stateInd = FA_STATE_IND>
+<#if stateInd="I">
+<#assign stateInd = "Y">
+<#elseif stateInd="A">
+<#assign stateInd = "Y">
+<#elseif stateInd="C">
+<#assign stateInd = "Y">
+<#elseif stateInd="R">
+<#assign stateInd = "N">
+</#if>
+"IdVal":"${ID_VAL}",
+"idType":"${ID_TYPE}",
+"stateInd":"${stateInd}"
+}
