@@ -1,0 +1,31 @@
+<#assign sList = val?split(",")>
+<#if sList?size gt 0>
+{
+"id0":"${sList[0]}",
+<#if sList?size gt 1>
+"id1":"${sList[1]}",
+</#if>
+<#if sList?size gt 2>
+"id3":"${sList[2]}"
+</#if>
+}
+</#if>
+
+<#list 0..sList?size-1 as i>
+<#assign res = sList[i]>
+<#if i=0>
+<#assign first = res>
+</#if>
+<#if i=1>
+<#assign second = res>
+</#if>
+</#list>
+
+{
+first : ${first},
+<#if second??>
+second : ${second}
+</#if>
+}
+
+
